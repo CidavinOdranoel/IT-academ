@@ -56,6 +56,20 @@ namespace Lesson5
             this._lastResult = result;
             return result;
         }
+        public bool IsEven(double x)
+        {
+            bool result = false;
+            if (x % 2 == 0)
+            {
+               result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            this._history += $"IsEven: Is {x} even: {result}\n";
+            return result;
+        }
 
         public string GetHistory()
         {
