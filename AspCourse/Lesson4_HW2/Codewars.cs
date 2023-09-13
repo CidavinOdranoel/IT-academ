@@ -22,13 +22,13 @@ namespace Lesson4_HW2
             countBy(2,5) === [2,4,6,8,10]
         */
 
-        public static List<int> CountBy (int x, int n)
+        public static List<int> CountBy(int x, int n)
         {
             List<int> ints = new List<int>(n);
 
             for (int i = 0; i < ints.Capacity; i++)
             {
-                ints.Add((i+1)*x);
+                ints.Add((i + 1) * x);
             }
 
             return ints;
@@ -60,9 +60,9 @@ namespace Lesson4_HW2
             For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
         */
 
-        public static List<int> CountOfPositiveAndSumOfNegative (List<int> ints)
-        { 
-            List<int> result =new List<int>(2);
+        public static List<int> CountOfPositiveAndSumOfNegative(List<int> ints)
+        {
+            List<int> result = new List<int>(2);
             int count = 0;
             int sum = 0;
             foreach (int e in ints)
@@ -93,9 +93,9 @@ namespace Lesson4_HW2
         public static int SquareThenSum(List<int> ints)
         {
             int result = 0;
-            foreach(int e in ints)
+            foreach (int e in ints)
             {
-                result += e^2;
+                result += e ^ 2;
             }
             return result;
         }
@@ -188,9 +188,9 @@ namespace Lesson4_HW2
         {
             int number = 0;
             int counter = list.Count;
-           foreach (var e in list)
+            foreach (var e in list)
             {
-                number += e * Convert.ToInt32(Math.Pow(10,--counter));        
+                number += e * Convert.ToInt32(Math.Pow(10, --counter));
             }
             number++;
             string str = number.ToString();
@@ -218,17 +218,17 @@ namespace Lesson4_HW2
         public static List<List<int>> Pyramid(int n)
         {
             List<List<int>> result = new List<List<int>>();
-            
+
             for (int i = 0; i < n; i++)
             {
                 result.Add(new List<int>(i + 1));
                 //int counter = 1;
-                    
-                    for (int k = 0; k < result[i].Capacity; k++)
-                    {
-                        result[i].Add(1);
-                    }
-                
+
+                for (int k = 0; k < result[i].Capacity; k++)
+                {
+                    result[i].Add(1);
+                }
+
                 //counter++;
             }
             return result;
@@ -244,11 +244,63 @@ namespace Lesson4_HW2
              flatten [[[1,2,3]]] # => [[1,2,3]]
         */
 
-        public static Array Flatten (Array array)
-        {
-            
+        // As far as I know, there is no way to have a general solution to this problem, so I made
+        // List<List<int>> to List<int>
 
-            return null;
+        public static List<int> FlattenList(List<List<int>> array)
+        {
+            List<int> result = new List<int>();
+
+            foreach (var item in array)
+            {
+                foreach (var item2 in item)
+                {
+                    result.Add(item2);
+                }
+            }
+            return result;
+        }
+
+        public static List<string> FlattenList(List<List<string>> array)
+        {
+            List<string> result = new List<string>();
+
+            foreach (var item in array)
+            {
+                foreach (var item2 in item)
+                {
+                    result.Add(item2);
+                }
+            }
+            return result;
+        }
+
+        //https://www.codewars.com/kata/556196a6091a7e7f58000018
+        /*
+            Given a sequence of numbers, find the largest pair sum in the sequence.
+                Examples
+                 [10, 14, 2, 23, 19] -->  42 (= 23 + 19)
+                 [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)           
+        */
+
+        public static int GetLargestPairSum(List<int> intsToSum)
+        {
+            int firstToSum = int.MinValue; 
+            int secondToSum = int.MinValue;
+
+            if (intsToSum.Count < 2) return 0; // If List is too short
+
+            foreach (var e in intsToSum)
+            {
+                if (e > firstToSum && firstToSum <= secondToSum)
+                {
+                    firstToSum = e;
+                } else if (e > secondToSum) {
+                    secondToSum = e;
+                }
+            }
+            int result = firstToSum + secondToSum;
+            return result;
         }
     }
 }
