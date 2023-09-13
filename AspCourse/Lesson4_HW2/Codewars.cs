@@ -82,6 +82,7 @@ namespace Lesson4_HW2
             return result;
         }
 
+        // Task4
         //https://www.codewars.com/kata/515e271a311df0350d00000f
         /*         
          Complete the square sum function so that it squares each number passed into it 
@@ -100,6 +101,7 @@ namespace Lesson4_HW2
             return result;
         }
 
+        // Task5
         //https://www.codewars.com/kata/5583090cbe83f4fd8c000051
         /*
           Given a random non-negative number, you have to return the digits of this 
@@ -125,6 +127,7 @@ namespace Lesson4_HW2
         // ADDITIONAL TASKS
         //
 
+        // aTask1
         //https://www.codewars.com/kata/57a5015d72292ddeb8000b31
         /*
          A palindrome is a word, phrase, number, or other sequence of 
@@ -171,6 +174,7 @@ namespace Lesson4_HW2
             return true;
         }
 
+        // aTask2
         //https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9
         /*
           Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
@@ -205,6 +209,7 @@ namespace Lesson4_HW2
             return result;
         }
 
+        // aTask3
         //https://www.codewars.com/kata/515f51d438015969f7000013
         /*
           Write a function that when given a number >= 0, returns an Array of ascending length subarrays.
@@ -234,6 +239,7 @@ namespace Lesson4_HW2
             return result;
         }
 
+        // aTask4
         //https://www.codewars.com/kata/5250a89b1625e5decd000413
         /*
           Write a function that flattens an Array of Array objects into a flat Array. 
@@ -275,6 +281,7 @@ namespace Lesson4_HW2
             return result;
         }
 
+        // aTask5
         //https://www.codewars.com/kata/556196a6091a7e7f58000018
         /*
             Given a sequence of numbers, find the largest pair sum in the sequence.
