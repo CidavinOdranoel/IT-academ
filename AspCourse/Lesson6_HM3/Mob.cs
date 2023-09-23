@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Lesson6_HM3
 {
-    internal class CharacterMob
+    public record class Mob
     {
+        public int CurrentX { get; set; }
+        public int CurrentY { get; set; }
+        public int Health { get; set; }
+
+        public void Death()
+        {
+            Console.WriteLine("Mob was killed");
+            Health = 0;
+        }
+
     }
 }
