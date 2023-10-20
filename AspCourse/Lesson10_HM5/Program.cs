@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Bogus;
+using System.Collections;
 
 namespace Lesson10_HM5
 {
@@ -82,14 +83,58 @@ namespace Lesson10_HM5
             //  Создайте пользовательский список.
             // Реализуйте добавление в список нового объекта так,
             // чтобы после добавления список сортировался по одному из свойств вашего класса.
-
+            //
             // Заполните список начальными данными.
             // Добавьте в ваш список новый элемент.
-
+            //
             // После каждого изменения списка выводите его на экран.
 
-            Task2 aga = new Task2(3, "3");
+            // Создание списка
+            Console.WriteLine("Создание пользовательского списка:");
+            Task2<int> task2 = new Task2<int>(new int[] {5,3,1 }, "Comment");
+            Console.WriteLine(task2);
+            Console.WriteLine();
 
+            // Добавление новых элементов
+            Console.WriteLine("Добавление новых элементов:");
+            task2.Add(4);
+            task2.Add(9);
+            Console.WriteLine(task2);
+            Console.WriteLine();
+
+            // Отключение автосортирооовки и добаление новых элементов
+            Console.WriteLine("Отключение автосортирооовки и добаление новых элементов:");
+            task2.AutoSort();
+            task2.Add(1);
+            Console.WriteLine(task2);
+            Console.WriteLine();
+            #endregion
+
+            #region TASK 3
+
+            Console.WriteLine("TASK 3");
+            Faker faker = new Faker(); // Bogus package
+
+            Dictionary<DateTime,string> books = new Dictionary<DateTime,string>();
+
+            DateTime dateToAdd;
+            string bookNameToAdd;
+
+            // Generating books
+            for (int i = 0; i < 5000; i++)
+            {
+                dateToAdd = faker.Date.Between(new DateTime(1950, 1, 1), new DateTime(2020, 12, 31));
+                bookNameToAdd = faker.Random.Words();
+                books.Add(dateToAdd, bookNameToAdd);
+            }
+
+            // Print ordered books
+            Console.WriteLine("Ordered books");
+            books = books.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
+            foreach (var e in books)
+            {
+                Console.WriteLine($"{e.Key} - \"{e.Value}\"");
+            }
             #endregion
 
         }
