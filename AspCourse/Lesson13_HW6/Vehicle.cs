@@ -12,18 +12,20 @@ namespace Lesson13_HW6
 
         protected int MaxSpeed { get; set; }
         protected string Color { get; set; }
+
+        private int fuel;
         protected int Fuel
         {
             get
             {
-                return this.Fuel;
+                return fuel;
             }
             set
             {
-                Fuel = value;
-                if (Fuel < 0)
+                fuel = value;
+                if (fuel < 0)
                 {
-                    Fuel = 0;
+                    fuel = 0;
                 }
             }
         }

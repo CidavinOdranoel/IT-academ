@@ -29,7 +29,7 @@ namespace Lesson13_HW6
             }
             if (Fuel > EngineCapacity)
             {
-                Console.WriteLine("Fuel capacity has been exeeded.");
+                Console.WriteLine($"Fuel capacity has been exeeded. Set to {EngineCapacity}");
                 Fuel = EngineCapacity;
                 return true;
             }

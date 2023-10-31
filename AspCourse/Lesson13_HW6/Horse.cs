@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lesson13_HW6
 {
-    internal class Horse :Vehicle
+    internal class Horse : Vehicle
     {
-        internal Horse(string name, string breed, string color = "brown", int maxSpeed = 80, int baseEnergy = 30) 
+        internal Horse(string name, string breed, string color = "brown", int maxSpeed = 80, int baseEnergy = 30)
         {
             _transportType = "Horse";
             Name = name;
@@ -29,11 +29,11 @@ namespace Lesson13_HW6
         }
 
         /// <summary>
-        /// Refill the energy of thhe horse
+        /// Refill the energy of the horse
         /// </summary>
-        internal new void ToFuel()
+        public new void ToFuel(int fuelAmount)
         {
-            Console.WriteLine("Horse is resting and regaining energy...");
+            Console.WriteLine("Horse can not be fueled. It is resting insted. Energy refilled.");
             Fuel = MaxEnergy;
         }
     }

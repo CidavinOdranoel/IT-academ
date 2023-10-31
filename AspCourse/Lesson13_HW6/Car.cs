@@ -8,7 +8,7 @@ namespace Lesson13_HW6
 {
     internal class Car : Vehicle
     {
-        internal Car(string color = "white", int baseFuel = 30, string brand = "Not specified")
+        internal Car(string brand = "Not specified", string color = "white", int baseFuel = 30)
         {
             _transportType = "Car";
             MaxSpeed = 180;
