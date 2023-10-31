@@ -37,6 +37,9 @@ namespace Lesson13_HW6
             Fuel = MaxEnergy;
         }
 
+        /// <summary>
+        /// Refill the energy of the horse
+        /// </summary>
         internal void Rest()
         {
             Console.WriteLine("Horse is resting... Energy refilled");
