@@ -31,9 +31,15 @@ namespace Lesson13_HW6
         /// <summary>
         /// Refill the energy of the horse
         /// </summary>
-        public new void ToFuel(int fuelAmount)
+        internal new void ToFuel(int fuelAmount)
         {
             Console.WriteLine("Horse can not be fueled. It is resting insted. Energy refilled.");
+            Fuel = MaxEnergy;
+        }
+
+        internal void Rest()
+        {
+            Console.WriteLine("Horse is resting... Energy refilled");
             Fuel = MaxEnergy;
         }
     }
