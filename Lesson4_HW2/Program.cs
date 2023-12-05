@@ -19,18 +19,18 @@
             int[] ints = { 1, 2, 3, 4, 5 };
             foreach (int i in ints)
             {
-                Console.Write(i + " ");
+                Console.Write(i+" ");
             }
             Console.WriteLine();
             Console.WriteLine();
 
             //Task2
             Console.WriteLine("Задание 2");
-            for (int i = 10; i < 100; i++)
+            for (int i = 10; i <100; i++)
             {
                 if (i % 5 == 0)
                 {
-                    Console.Write(i + " ");
+                    Console.Write(i+" ");
                 }
             }
             Console.WriteLine();
@@ -44,7 +44,6 @@
                 Console.WriteLine(number);
                 number -= 20;
             } while (number >= -100);
-            Console.WriteLine();
 
 
             //          CODEWARS
@@ -56,7 +55,6 @@
             {
                 Console.Write($"{e} ");
             }
-            Console.WriteLine();
             Console.WriteLine();
 
             // Task 2
@@ -71,16 +69,16 @@
             // Task 3
             Console.WriteLine("Codewars Task3");
             var test3 = Codewars.CountOfPositiveAndSumOfNegative(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15 });
+            Console.WriteLine();
             foreach (int e in test3)
             {
                 Console.Write($"{e} ");
             }
             Console.WriteLine();
-            Console.WriteLine();
 
             // Task 4
             Console.WriteLine("Codewars Task4");
-            Console.WriteLine($"{Codewars.SquareThenSum(new List<int> { 1, 2, 2 })}");
+            Console.WriteLine($"{Codewars.SquareThenSum(new List<int> {1,2,2 })}");
             Console.WriteLine();
 
             // Task 5
@@ -89,7 +87,6 @@
             {
                 Console.Write($"{item} ");
             }
-            Console.WriteLine();
             Console.WriteLine();
 
             // Additional Task 1
@@ -108,12 +105,12 @@
                 Console.Write(e);
             }
             Console.WriteLine();
-            Console.WriteLine();
 
             // Additional Task 3
             Console.WriteLine("Additional Task 3");
             var test43 = Codewars.Pyramid(4);
             int counter = 0;
+            Console.WriteLine();
             foreach (var e in test43)
             {
                 Console.WriteLine($"Массив {++counter}:");
@@ -126,42 +123,8 @@
             Console.WriteLine();
 
             // Additional Task 4
-            Console.WriteLine("Additional Task 4");
-            var intList1 = new List<int>();
-            var intList2 = new List<int>();
-            var stringList1 = new List<string>();
-            var stringList2 = new List<string>();
 
-            intList1.Add(0); intList1.Add(1);
-            intList2.Add(2); intList2.Add(3);
-            stringList1.Add("qwe"); stringList1.Add("asd");
-            stringList2.Add("zxc"); stringList2.Add("rty");
-
-            var intListOfLists = new List<List<int>>();
-            var stringListOfLists = new List<List<string>>();
-
-            intListOfLists.Add(intList1); intListOfLists.Add(intList2);
-            stringListOfLists.Add(stringList1); stringListOfLists.Add(stringList2);
-
-            var intList4 = Codewars.FlattenList(intListOfLists);
-            var stringList4 = Codewars.FlattenList(stringListOfLists);
-
-            foreach (var e in intList4)
-            {
-                Console.WriteLine(e);
-            }
-            foreach (var e in stringList4)
-            {
-                Console.WriteLine(e);
-            }
-            Console.WriteLine();
-
-            // Additional Task 5
-            Console.WriteLine("Additional Task 5");
-            var test6 = new List<int> { 1, 2, 3, 4, 5, 6, 5, 4, 3, 2 };
-            Console.WriteLine(Codewars.GetLargestPairSum(test6));
-
-            Console.ReadKey();
+            Console.ReadKey(); 
 
 
 
